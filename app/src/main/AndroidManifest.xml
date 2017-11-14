@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myqyarter20171113">
+    <!--这4个权限都是必须添加的，最好检查下是否同工程已经添加的权限重复，权限具体用途请自行搜索-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+
+    <application
+        android:name=".AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--替换为在友盟后台申请的应用Appkey-->
+        <meta-data android:value="5a0a8cd98f4a9d31c70000d4" android:name="UMENG_APPKEY"></meta-data>
+        <!--应用的推广渠道名称，Channel ID自定义-->
+        <meta-data android:value="yikezhong" android:name="UMENG_CHANNEL"/>
+
+
+
+    </application>
+
+</manifest>
